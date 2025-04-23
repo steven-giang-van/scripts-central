@@ -9,5 +9,7 @@ Import-Module MicrosoftTeams
 ```
 
 A Powershell script that can bulk archive a list of teams in Microsoft by reading through a CSV
-list. Running the script will prompt you to enter the path to the CSV file. A sample CSV is
-provided.
+list. Running the script will prompt you to enter the path to the CSV file. At the end of the
+operation, an error log is created for any teams that were not archived. 
+
+A sample CSV is provided. All you need to do is fill the list below DisplayName with the teams.
