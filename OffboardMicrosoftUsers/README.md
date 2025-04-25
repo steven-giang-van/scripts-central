@@ -12,6 +12,12 @@ Install-Module ExchangeOnlineManagement -Scope CurrentUser
 Install-Module MSOnline -Scope CurrentUser
 ```
 
+**NOTE:** Edit the file path to your user list on line 17:
+```
+# Import users from CSV
+$users = Import-Csv -Path "/Users/{user}/SampleList.csv"
+```
+
 The following steps are the operations the script will perform in order:
 
 1. Convert user's mailbox to be shared
