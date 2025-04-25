@@ -1,0 +1,7 @@
+# Upload Backgrounds To Teams
+
+Bash script to upload a list of backgrounds from a public repo to the user's Teams background folder.
+First images are downloaded from the public repo [Slingshot Aerospace Background Images](https://github.com/steven-giang-van/BackgroundImages), which will then be uploaded to the Teams backgrounds folder.
+The script will create a thumbnail image so that it can be selectable in the backgrounds menu.
+
+Background images: [Slingshot Aerospace Background Images](https://github.com/steven-giang-van/BackgroundImages)
