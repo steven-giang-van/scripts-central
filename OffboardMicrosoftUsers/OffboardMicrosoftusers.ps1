@@ -14,7 +14,7 @@ Connect-MgGraph -Scopes "User.ReadWrite.All", "Group.Read.All", "GroupMember.Rea
 Connect-ExchangeOnline
 
 # Import users from CSV
-$users = Import-Csv -Path "/Users/steven/Downloads/UsersToSharedMailbox.csv"
+$users = Import-Csv -Path "/Users/{user}/SampleList.csv"
 
 # Get all groups and filter ones that assign licenses
 $allGroups = Get-MgGroup -All
