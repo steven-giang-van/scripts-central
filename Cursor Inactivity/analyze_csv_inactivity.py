@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-User Inactivity Analysis Script
+User CSV Activity Analysis Script
 
-This script analyzes user activity data to find users who have been inactive 
-for 14 consecutive days, with support for excluding specific dates and 
+This script analyzes user activity data from the downloaded
+analytics CSV to find users who have been inactive for 14 
+consecutive days, with support for excluding specific dates and 
 resetting counters when users are active on excluded dates.
 
 Usage: python3 analyze_user_inactivity.py [csv_file]
