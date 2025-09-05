@@ -1,0 +1,67 @@
+# Automated User Management Configuration
+# Copy this file to config.yaml and customize with your actual settings
+
+# Cursor Admin API Configuration
+cursor_api:
+  api_key: "your_cursor_api_key_here"  # Replace with your actual API key
+  base_url: "https://api.cursor.com"  # Official Cursor Admin API endpoint
+
+# Analysis Settings
+analysis_days: 35  # Number of days to analyze for inactivity (5 weeks to capture more activity history)
+inactive_threshold: 14  # Days of inactivity before user is flagged
+exclude_weekends: true  # Exclude weekends from inactivity counting
+excluded_dates:  # List of holidays to exclude (YYYY-MM-DD format)
+  - "2025-01-01"  # New Year's Day
+  - "2025-01-20"  # Martin Luther King Jr. Day (3rd Monday in January)
+  - "2025-02-17"  # Presidents' Day (3rd Monday in February)
+  - "2025-05-26"  # Memorial Day (Last Monday in May)
+  - "2025-06-19"  # Juneteenth
+  - "2025-06-20"  # Extending the Juneteenth break (Friday)
+  - "2025-07-04"  # Independence Day
+  - "2025-07-07"  # Extending the July 4th weekend (Monday)
+  - "2025-08-29"  # Creating a long Labor Day weekend (Friday)
+  - "2025-09-01"  # Labor Day (1st Monday in September)
+  - "2025-10-13"  # Indigenous Peoples' Day (2nd Monday in October, formerly Columbus Day)
+  - "2025-11-11"  # Veterans Day
+  - "2025-11-27"  # Thanksgiving (4th Thursday in November)
+  - "2025-11-28"  # Day after Thanksgiving (Friday)
+  # Winter Holiday - Last two weeks of December (typically Dec 18-31)
+  - "2025-12-18"  # Winter Holiday Start
+  - "2025-12-19"  # Winter Holiday
+  - "2025-12-20"  # Winter Holiday
+  - "2025-12-21"  # Winter Holiday
+  - "2025-12-22"  # Winter Holiday
+  - "2025-12-23"  # Winter Holiday
+  - "2025-12-24"  # Winter Holiday
+  - "2025-12-25"  # Christmas Day
+  - "2025-12-26"  # Winter Holiday
+  - "2025-12-27"  # Winter Holiday
+  - "2025-12-28"  # Winter Holiday
+  - "2025-12-29"  # Winter Holiday
+  - "2025-12-30"  # Winter Holiday
+  - "2025-12-31"  # New Year's Eve
+
+# Groups to monitor and manage
+groups_to_monitor:
+  - group_id: "your_group_id_here"
+    group_name: "your-group-name"
+    description: "Your group description"
+  - group_id: "another_group_id_here"
+    group_name: "another-group-name"
+    description: "Another group description"
+
+# Reporting Settings
+send_reports_always: false  # Send reports even if no actions taken
+
+# Logging Configuration
+audit_log_file: "user_management_audit.log"  # Audit log file path
+
+# Safety Settings
+dry_run_by_default: false  # Set to true to prevent accidental changes
+require_confirmation: true  # Require manual confirmation before removing users
+max_users_per_run: 50  # Maximum number of users to process in one run
+
+# Advanced Settings
+retry_attempts: 3  # Number of retry attempts for API calls
+retry_delay: 5  # Delay between retry attempts (seconds)
+timeout: 30  # API request timeout (seconds)
