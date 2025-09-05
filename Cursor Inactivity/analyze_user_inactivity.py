@@ -14,6 +14,8 @@ from datetime import datetime, timedelta
 import sys
 import os
 
+
+
 def analyze_user_inactivity(csv_file, excluded_dates=None, inactive_threshold=14, exclude_weekends=True):
     """
     Analyze user activity data to find users inactive for specified consecutive days.
@@ -23,6 +25,7 @@ def analyze_user_inactivity(csv_file, excluded_dates=None, inactive_threshold=14
         excluded_dates (list): List of datetime objects to exclude from analysis (holidays)
         inactive_threshold (int): Number of consecutive inactive days to flag
         exclude_weekends (bool): Whether to automatically exclude weekends from counting
+
     
     Returns:
         dict: Analysis results including inactive users and statistics
