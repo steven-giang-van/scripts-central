@@ -260,8 +260,18 @@ def main():
     
     # Define excluded holidays (weekends are automatically excluded)
     excluded_holidays = [
-        datetime(2025, 7, 4),   # 7/4 - Independence Day
-        datetime(2025, 7, 7),   # 7/7 - Extra weekened
+        datetime(2026, 1, 1),    # New Year's Day
+        datetime(2026, 1, 19),    # Martin Luther King Jr. Day
+        datetime(2026, 2, 16),    # Presidents' Day
+        datetime(2026, 5, 25),  # Memorial Day (Last Monday in May)
+        datetime(2026, 6, 19),  # Juneteenth
+        datetime(2026, 7, 3),  # Independence Day
+        datetime(2026, 9, 7),  # Labor Day
+        datetime(2026, 10, 12),  # Indigenous Peoples'/Columbus Day (2nd Monday in October, formerly Columbus Day)
+        datetime(2026, 11, 11),  # Veterans Day
+        datetime(2026, 11, 26),  # Thanksgiving
+        datetime(2026, 12, 31),  # Christmas Day
+        datetime(2026, 12, 31),  # New Year's Eve
     ]
     
     # Run analysis with automatic weekend exclusion
